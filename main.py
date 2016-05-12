@@ -84,7 +84,7 @@ def main():
     print(generator2(n=1837))    # 3 задание
     # create_sort_txt(generator(n=10000))
     # create_sort_txt(my_random(n=1837), file_txt='out_rand.txt')
-    create_sort_txt(generator2(n=1837), 'out_g.txt')
+    create_sort_txt(my_random(), 'out.txt')
 
 if __name__ == '__main__':
     main()
