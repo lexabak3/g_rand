@@ -33,14 +33,14 @@ def generator(q=2.36, u=10.3, n=1000):
     return l
 
 
-def generator2(q=2.36, u=10.3, n=100):
-    num_list = my_random()
+def generator2(q=2.36, u=10.3, m=1837, n=1000):
+    num_list = my_random(n=n)
     new_list = []
     i = 0
     f = {}
     for x in num_list:
         i += 1
-        f[i] = (1/(q*math.sqrt(2*math.pi))) * math.exp(-((pow(int(x)-u, 2))/(2*q*q)))
+        f[i] = (1/(q*math.sqrt(2*math.pi))) * math.exp(-((pow((int(x)/m)-u, 2))/(2*q*q)))
         new_list.append(f[i])
     return new_list
 
@@ -80,12 +80,11 @@ def create_sort_txt(sort_list, file_txt='out.txt'):
 
 def main():
     # find_num()            # 1 задание
-    # my_random()    # 2 задание
-    # print(generator())    # 3 задание
+    print(my_random())    # 2 задание
+    print(generator2(n=1837))    # 3 задание
     # create_sort_txt(generator(n=10000))
     # create_sort_txt(my_random(n=1837), file_txt='out_rand.txt')
-    print(generator2())
-
+    create_sort_txt(generator2(n=1837), 'out_g.txt')
 
 if __name__ == '__main__':
     main()
