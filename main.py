@@ -64,6 +64,17 @@ def find_num(a=6732, m=950, file_txt=in_txt):
     return 0
 
 
+def normal(m=1837, n=5000):
+    my_list = my_random(n=n, m=m)
+    list_of_u = [x/m for x in my_list]
+    my_sum = {}
+    new_list = []
+    for i in range(int(n*0.2)):
+        my_sum[i] = math.sqrt(12*0.2)*(sum(list_of_u[i*5:i*5+5]) - 2.5)
+        new_list.append(my_sum[i])
+    return new_list
+
+
 def open_txt():
     read_txt = open(in_txt, 'r')
     my_list = read_txt.readlines()
@@ -80,11 +91,11 @@ def create_sort_txt(sort_list, file_txt='out.txt'):
 
 def main():
     # find_num()            # 1 задание
-    print(my_random())    # 2 задание
-    print(generator2(n=1837))    # 3 задание
+    # print(my_random())      # 2 задание
+    # print(generator2(n=1837))    # 3 задание
     # create_sort_txt(generator(n=10000))
     # create_sort_txt(my_random(n=1837), file_txt='out_rand.txt')
-    create_sort_txt(my_random(), 'out.txt')
+    create_sort_txt(normal(), 'normal.txt')
 
 if __name__ == '__main__':
     main()
