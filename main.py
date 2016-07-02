@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import math
 import random
 in_txt = 'Seq02.txt'
@@ -90,12 +90,12 @@ def create_sort_txt(sort_list, file_txt='out.txt'):
 
 
 def main():
-    # find_num()            # 1 задание
-    # print(my_random())      # 2 задание
-    # print(generator2(n=1837))    # 3 задание
+     find_num()            # 1 задание
+     print(my_random())      # 2 задание
+     print(generator2(n=1837))    # 3 задание
     # create_sort_txt(generator(n=10000))
     # create_sort_txt(my_random(n=1837), file_txt='out_rand.txt')
-    create_sort_txt(normal(), 'normal.txt')
+    # create_sort_txt(normal(), 'normal.txt')
 
 if __name__ == '__main__':
     main()
